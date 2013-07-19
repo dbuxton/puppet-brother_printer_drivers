@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe 'sublime_text_2' do
+describe 'brother_printer_driver' do
   it do
-    should contain_package('SublimeText2').with({
+    should contain_package('brother_printer_driver').with({
       :provider => 'appdmg',
-      :source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg'
+      :source   => 'https://www.dropbox.com/s/t4sdo43sbqng9op/brxclaserX6_410.dmg'
     })
   end
 end

@@ -1,18 +1,11 @@
-# Install Sublime Text 2 into /Applications
+# Install drivers for Brother HL-3040CN printer
 #
 # Usage:
 #
-#     include sublime_text_2
-class sublime_text_2 {
-  package { 'SublimeText2':
+#     include brother_printer_drivers
+class brother_printer_drivers {
+  package { 'brother_printer_drivers':
     provider => 'appdmg',
-    source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg';
-  }
-
-  file { "${boxen::config::bindir}/subl":
-    ensure  => link,
-    target  => '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl',
-    mode    => '0755',
-    require => Package['SublimeText2'],
+    source   => 'https://www.dropbox.com/s/t4sdo43sbqng9op/brxclaserX6_410.dmg';
   }
 }
